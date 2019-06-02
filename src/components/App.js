@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import TextField from './TextField';
-import AddButton from './AddButton'
+import AddButton from './AddButton';
+import List from './List';
 import '../App.css';
 
 class App extends Component {
@@ -50,6 +51,9 @@ class App extends Component {
          <AddButton
          />
          </div>
+         <List
+            description="todoの内容"
+          />
         </div>
        </div>
        );
