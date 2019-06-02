@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
-import TextField from './TextField'
+import TextField from './TextField';
+import AddButton from './AddButton'
 import '../App.css';
 
 class App extends Component {
@@ -25,21 +26,31 @@ class App extends Component {
       });
     };
 
+    //clickAddButton(){
+    //  this.setState({
+
+    //  })
+    //}
+
     render() {
        return (
          <div className="App">
-            <NavBar
-            onToggle={() => this.handleToggle()}
-            open={this.state.open}
-            />
          <div>
-            <div className="TextField">
-            <TextField handleChange = {(e)=>{this.handleChange(e,e.target.name)}}
-             defaultValue={this.state.defaultValue}
-             name={this.state.name}
-            />
-            </div>
+         <NavBar
+           onToggle={() => this.handleToggle()}
+           open={this.state.open}
+         />
+         <div className="TextField">
+         <TextField handleChange = {(e)=>{this.handleChange(e,e.target.name)}}
+           defaultValue={this.state.defaultValue}
+           name={this.state.name}
+         />
          </div>
+         <div className="AddButton">
+         <AddButton
+         />
+         </div>
+        </div>
        </div>
        );
      }
